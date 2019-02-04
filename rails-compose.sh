@@ -2,12 +2,7 @@
 
 touch Gemfile.lock
 
-
-# Full stack
-# docker-compose run api rails new . --database=mysql
-
-# API
-docker-compose run api rails new . --database=mysql --api 
+git clone https://github.com/tyanakaz/atNuda-swaggerhub-rails5.git
 
 sleep 5 
 
