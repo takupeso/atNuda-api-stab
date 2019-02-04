@@ -10,7 +10,12 @@ sleep 5
 
 docker-compose build --force-rm
 
-sleep 5
+sleep 15
 
-docker-compose up -d && docker-compose exec api rake db:create
-docker-compose up -d && docker-compose exec api rake db:migrate
+
+docker-compose up -d 
+
+sleep 15
+
+docker-compose exec api rake db:create
+docker-compose exec api rake db:migrate
