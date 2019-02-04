@@ -1,9 +1,13 @@
 version: '3'
 services:
   db:
-    image: postgres:11.1
+    image: mysql:5.7.24
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: password
     volumes:
-      - ./db/postgresql/volumes:/var/lib/postgresql/data
+      - ./db/mysql/volumes:/var/lib/mysql
+      #- ./db/mysql/conf:/etc
 
   api:
     build: .
