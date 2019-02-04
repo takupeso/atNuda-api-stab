@@ -1,19 +1,25 @@
-# Ruby on rails Development environment
-  
-  
-## Create development environment
+# Swagger for Rails 5
 
-Please run the rails-compose.sh script.
-  
-  
-## Initialization of development environment
+This is a project to provide Swagger support inside the [Ruby on Rails](http://rubyonrails.org/) framework.
 
-Please run the rails-rm.sh script.
-  
-  
-## Delete all docker container & images
+## Prerequisites
+You need to install ruby >= 2.2.2 and run:
 
-Please run the docker-rm.sh script.
+```
+bundle install
+```
 
-**Delete all docker environments. Please do not use it when other environment exists.**
-# atNuda-api-stab
+## Getting started
+
+This sample was generated with the [swagger-codegen](https://github.com/swagger-api/swagger-codegen) project.
+
+```
+bin/rake db:create db:migrate
+bin/rails s
+```
+
+To list all your routes, use:
+
+```
+bin/rake routes
+```

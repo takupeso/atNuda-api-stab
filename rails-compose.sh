@@ -4,7 +4,7 @@ touch Gemfile.lock
 
 git clone https://github.com/tyanakaz/atNuda-swaggerhub-rails5.git
 cp -a atNuda-swaggerhub-rails5/* .
-rm -rf atNuda-swaggerhub-rails
+rm -rf atNuda-swaggerhub-rails5
 
 sleep 5 
 
@@ -15,7 +15,7 @@ sleep 15
 
 docker-compose up -d 
 
-sleep 15
+sleep 30
 
 docker-compose exec api rake db:create
 docker-compose exec api rake db:migrate
