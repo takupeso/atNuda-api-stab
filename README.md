@@ -9,6 +9,8 @@ docker-compose build --force-rm
 
 ## 起動・再起動
 
+**まずはビルドしてください**
+
 ```
 docker-compose up
 ```
@@ -18,6 +20,8 @@ docker-compose up
 ```
 docker-compose up -d
 ```
+
+http:localhost:3000 にブラウザからアクセスし、Railsページを表示されれば起動完了
 
 ## コンテナへのログイン
 ```
