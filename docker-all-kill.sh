@@ -1,7 +1,6 @@
 #!/bin/sh
-  
-LIST=`docker-compose ps | awk '{print $1}' | grep -v "CONTAINER"`
-for line in `echo $LIST`
+
+for line in `docker ps -a | awk '{print $1}' | grep -v "CONTAINER"`
 do
    docker stop $line
    docker rm $line
