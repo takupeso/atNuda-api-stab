@@ -12,13 +12,16 @@ class SessionsController < ApplicationController
 
   def create
     # Your code here
-
-    render json: { date: {status: 200, "token" => "xxxxx", message="OK"} } 
+    
+    bad_request
+    render json: { "date": {"status": 201, "token": "tokenxxx", "message": "OK"} } unless error?
   end
 
   def destroy
     # Your code here
 
-    render json: { date: {status: 200, "message" => "OK"} } 
+    bad_request
+    not_found
+    render json: { "date": {"status": 205, "message" => "OK"} } unless error?
   end
 end

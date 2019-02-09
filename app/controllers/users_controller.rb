@@ -14,16 +14,12 @@ class UsersController < ApplicationController
   PAGE_ERROR400_JSON = {"error": { "status": 400, "message": "Invalid page supplied" } }
   PAGE_ERROR404_JSON = {"error": { "status": 404, "message": "Invalid page not found" } }
 
-  def create
-    # Your code here
-
-    render json: { date: {status: 200, "message" => "OK" } } 
-  end
-
   def destroy
     # Your code here
 
-    render json: { date: {status: 200, "message" => "OK" } } 
+    bad_request
+    not_found
+    render json: { date: {status: 200, "message" => "OK" } } unless error?
   end
 
   def get_portfolios_of_user_by_uuid
@@ -32,7 +28,7 @@ class UsersController < ApplicationController
       data: {
         "uuid": "userxxxxxxx1",
         "name": "john",
-        "position": "フロントエンド",
+        "position": ["フロントエンド", "デザイナー"],
         "status": "転職中",
         "user_large_image_url": "https://user1-large.com/",
         "user_small_images_url": "https://user-small1.com/",
@@ -176,18 +172,16 @@ class UsersController < ApplicationController
         }
       }
 
-    json = PAGE_ERROR400_JSON if params[:page] == "400"
-    json = PAGE_ERROR404_JSON if params[:page] == "404"
-
-    json = USER_ERROR400_JSON if params[:uuid] == "400"
-    json = USER_ERROR404_JSON if params[:uuid] == "404"
-
-    render json: json
+    bad_request
+    not_found
+    render json: json unless error?
   end
 
   def update
     # Your code here
-
-    render json: { date: {status: 200, "message" => "OK" } } 
+    
+    bad_request
+    not_found
+    render json: { "date": {"status": 200, "message" => "OK" } } unless error?
   end
 end

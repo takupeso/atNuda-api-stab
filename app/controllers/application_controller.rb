@@ -4,15 +4,31 @@ class ApplicationController < ActionController::API
   #NOT_FOUND = {"error": { "status": 404, "message": "Invalid status not found" } }
   #INVALID_JSON = {"error": { "status": 405, "message": "Invalid json" }}
 
-  #def bad_request
-  #  render json: render BAD_REQUEST if params[:uuid] = 400
-  #end
+  def param?
+    params[:data].present?
+  end
 
-  #def not_found
-  #  render json: render NOT_FOUND if params[:uuid] = 400
-  #end
+  def error?
+    if param?
+      data = params.require(:data)
+      return data[:error].present?
+    end
+    false
+  end
 
-  #def invalid_json
-  #  render json: render INVALID_JSON if params[:uuid] = 405
-  #end
+  def error_status
+    if param? && error?
+      data = params.require(:data)
+      return data[:error]
+    end
+    nil
+  end
+
+  def bad_request
+    render json: { "date": {"status": 400, "message" => "bad request" } } if error_status == 400
+  end
+
+  def not_found
+    render json: { "date": {"status": 404, "message" => "not found" } } if error_status == 404
+  end
 end
