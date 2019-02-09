@@ -360,6 +360,8 @@ not found 404
 ```
 curl http://localhost:3000/api/v1/corrections/correctionxxx -X DELETE -H "Content-Type: application/json" -d '{"data":{"error": 400}}'
 
+OR
+
 curl http://localhost:3000/api/v1/sessions/tokenxxx -X DELETE -H "Content-Type: application/json" -d '{"data":{"error":404}}'
 ```
 
