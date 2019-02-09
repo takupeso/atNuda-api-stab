@@ -171,6 +171,7 @@ curl http://localhost:3000/api/v1/portfolios/portxxxxx1 -X DELETE -H "Content-Ty
 bad request 400
 not found 404
 
+----
 
 # コメント
 ## 新規登録(create)
