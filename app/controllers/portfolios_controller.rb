@@ -60,8 +60,9 @@ class PortfoliosController < ApplicationController
             {
               "myself": false,
               "correction": "誰かの添削コメント"
-            }
+            },
           ],
+          "like": 4,
           "user": {
             "name": "john",
             "position": positions,
@@ -98,6 +99,7 @@ class PortfoliosController < ApplicationController
               "correction": "誰かの添削コメント"
             }
           ],
+          "like": 0,
           "user": {
             "name": "john",
             "position": positions,
@@ -134,6 +136,7 @@ class PortfoliosController < ApplicationController
               "correction": "誰かの添削コメント"
             }
           ],
+          "like": 2,
           "user": {
             "name": "john",
             "position": positions,
@@ -170,6 +173,7 @@ class PortfoliosController < ApplicationController
               "correction": "誰かの添削コメント"
             }
           ],
+          "like": 20,
           "user": {
             "name": "john",
             "position": positions,
@@ -206,6 +210,7 @@ class PortfoliosController < ApplicationController
               "correction": "誰かの添削コメント"
             }
           ],
+          "like": 100,
           "user": {
             "name": "john",
             "position": positions,

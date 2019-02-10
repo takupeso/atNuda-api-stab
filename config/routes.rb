@@ -14,7 +14,9 @@ Rails.application.routes.draw do
     full_path = path.gsub(/{(.*?)}/, ':\1')
     match full_path, to: "#{opts.fetch(:controller_name)}##{opts[:action_name]}", via: http_method
   end
-
+  
+  add_swagger_route 'POST', '/api/v1/portfolios/{uuid}/likes', controller_name: 'likes', action_name: 'create'
+  add_swagger_route 'DELETE', '/api/v1/portfolios/{uuid}/likes', controller_name: 'likes', action_name: 'delete'
   add_swagger_route 'POST', '/api/v1/comments', controller_name: 'comments', action_name: 'create'
   add_swagger_route 'DELETE', '/api/v1/comments/{uuid}', controller_name: 'comments', action_name: 'delete_comment'
   add_swagger_route 'PATCH', '/api/v1/comments/{uuid}', controller_name: 'comments', action_name: 'update_comment'

@@ -119,7 +119,7 @@ curl http://localhost:3000/api/v1/portfolios/ -X POST -H "Content-Type: applicat
 
 #### エラー
 bad request 400
-
+not found 404
 
 ## 取得(show)
 GET http://localhost:3000/api/v1/portfolios/{page}
@@ -184,7 +184,7 @@ not found 404
 POST http://localhost:3000/api/v1/comments
 
 ```
-curl http://localhost:3000/api/v1/comments/ -X POST -H "Content-Type: application/json" -d '{"data":{{"comment": "コメントです"}}'
+curl http://localhost:3000/api/v1/comments/ -X POST -H "Content-Type: application/json" -d '{"data":{"comment": "コメントです"}}'
 
 ```
 #### 成功時のレスポンス
@@ -195,6 +195,7 @@ curl http://localhost:3000/api/v1/comments/ -X POST -H "Content-Type: applicatio
 
 #### エラー
 bad request 400
+not found 404
 
 
 ## 更新(update)
@@ -347,6 +348,51 @@ curl http://localhost:3000/api/v1/sessions/tokenxxx -X DELETE -H "Content-Type: 
 #### エラー
 bad request 400
 not found 404
+
+----
+
+# いいね
+## 新規登録(create)
+
+#### 例
+POST http://localhost:3000/api/v1/portfolios/{uuid}/likes
+
+```
+curl http://localhost:3000/api/v1/portfolios/portxxx/likes -X POST -H "Content-Type: application/json"
+
+```
+#### 成功時のレスポンス
+
+```
+{"date":{"status":201,"message":"OK"}}%    
+```
+
+#### エラー
+bad request 400
+not found 404
+
+## 削除(delete)
+DELETE http://localhost:3000/api/v1/portfolios/{uuid}/likes
+
+#### 例
+
+```
+curl http://localhost:3000/api/v1/portfolios/portxxx/likes -X DELETE -H "Content-Type: application/json"
+
+```
+
+#### 成功時のレスポンス
+
+```
+{"date":{"status":205,"message":"OK"}}% 
+```
+
+#### エラー
+bad request 400
+not found 404
+
+
+----
 
 ----
 

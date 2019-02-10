@@ -35,6 +35,7 @@ class UsersController < ApplicationController
         "portforios": [
             {
               "uuid": "portxxxxxxx1",
+              "like": 4,
               "site_url": "https://site1.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -44,6 +45,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx2",
+              "like": 2,
               "site_url": "https://site2.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -53,6 +55,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx3",
+              "like": 4,
               "site_url": "https://site3.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -62,6 +65,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx4",
+              "like": 3,
               "site_url": "https://site4.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -71,6 +75,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx5",
+              "like": 1,
               "site_url": "https://site5.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -80,6 +85,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx6",
+              "like": 10,
               "site_url": "https://site6.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -89,6 +95,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx7",
+              "like": 0,
               "site_url": "https://site7.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -98,6 +105,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx8",
+              "like": 0,
               "site_url": "https://site8.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -107,6 +115,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx9",
+              "like": 3,
               "site_url": "https://site9.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -125,6 +134,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx11",
+              "like": 6,
               "site_url": "https://site11.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -134,6 +144,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx12",
+              "like": 0,
               "site_url": "https://site12.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -143,6 +154,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx13",
+              "like": 100,
               "site_url": "https://site13.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -152,6 +164,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx14",
+              "like": 0,
               "site_url": "https://site14.com/",
               "image_urls": [
                 "https://image.com/1",
@@ -161,6 +174,7 @@ class UsersController < ApplicationController
             },
             {
               "uuid": "portxxxxxxx15",
+              "like": 100,
               "site_url": "https://site15.com/",
               "image_urls": [
                 "https://image.com/1",
