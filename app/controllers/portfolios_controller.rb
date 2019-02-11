@@ -63,6 +63,7 @@ class PortfoliosController < ApplicationController
             },
           ],
           "like": 4,
+          "follower": 0,
           "user": {
             "name": "john",
             "position": positions,
@@ -100,6 +101,7 @@ class PortfoliosController < ApplicationController
             }
           ],
           "like": 0,
+          "follower": 0,
           "user": {
             "name": "john",
             "position": positions,
@@ -137,6 +139,7 @@ class PortfoliosController < ApplicationController
             }
           ],
           "like": 2,
+          "follower": 9,
           "user": {
             "name": "john",
             "position": positions,
@@ -174,6 +177,7 @@ class PortfoliosController < ApplicationController
             }
           ],
           "like": 20,
+          "follower": 20,
           "user": {
             "name": "john",
             "position": positions,
@@ -211,6 +215,7 @@ class PortfoliosController < ApplicationController
             }
           ],
           "like": 100,
+          "follower": 200,
           "user": {
             "name": "john",
             "position": positions,
