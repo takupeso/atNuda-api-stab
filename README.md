@@ -49,11 +49,11 @@ docker-compose down
 なし（ログイン時に自動生成される => SessionController）
 
 ## 取得(index)
-GET http://localhost:3000/api/v1/users/{uuid}/portfolios/{page}
+GET http://localhost:3000/users/{uuid}/portfolios/{page}
 
 #### 例
 ```
- curl http://localhost:3000/api/v1/users/userxxxxxxx1/portfolios/1 -X GET -H "Content-Type: application/json"
+ curl http://localhost:3000/users/userxxxxxxx1/portfolios/1 -X GET -H "Content-Type: application/json"
 ```
 
 #### 成功時のレスポンス
@@ -66,12 +66,12 @@ bad request 400
 not found 404
 
 ## 更新(update)
-PATCH http://localhost:3000/api/v1/users/{uuid}
+PATCH http://localhost:3000/users/{uuid}
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/users/userxxxxxxx1 -X PATCH -H "Content-Type: application/json" -d '{"uuid": "userxxxxxxx1", "name": "john", "position": ["フロントエンド", "デザイナー"],"status": "転職中","user_large_image_url": "https://user1-large.com/","user_small_images_url": "https://user-small1.com/"}'
+curl http://localhost:3000/users/userxxxxxxx1 -X PATCH -H "Content-Type: application/json" -d '{"uuid": "userxxxxxxx1", "name": "john", "position": ["フロントエンド", "デザイナー"],"status": "転職中","user_large_image_url": "https://user1-large.com/","user_small_images_url": "https://user-small1.com/"}'
 ```
 
 #### 成功時のレスポンス
@@ -85,11 +85,11 @@ not found 404
 
 
 ## 削除(delete)
-DELETE http://localhost:3000/api/v1/users/{uuid}
+DELETE http://localhost:3000/users/{uuid}
 
 #### 例
 ```
-curl http://localhost:3000/api/v1/users/userxxxxxxx1 -X DELETE -H "Content-Type: application/json"
+curl http://localhost:3000/users/userxxxxxxx1 -X DELETE -H "Content-Type: application/json"
 ```
 
 #### 成功時のレスポンス
@@ -104,11 +104,11 @@ not found 404
 ----
 # ポートフォリオ
 ## 新規登録(create)
-POST http://localhost:3000/api/v1/portfolios/
+POST http://localhost:3000/portfolios/
 
 #### 例
 ```
-curl http://localhost:3000/api/v1/portfolios/ -X POST -H "Content-Type: application/json" -d '{"data":{"uuid": "portxxxxx1", "site_url": "https://site-example.com/1","image_urls": ["https://example.com/1", "https://example.com/2","https://example.com/3"],"portfolio_comment": "一言"}}' 
+curl http://localhost:3000/portfolios/ -X POST -H "Content-Type: application/json" -d '{"data":{"uuid": "portxxxxx1", "site_url": "https://site-example.com/1","image_urls": ["https://example.com/1", "https://example.com/2","https://example.com/3"],"portfolio_comment": "一言"}}' 
 ```
 
 #### 成功時のレスポンス
@@ -122,13 +122,13 @@ bad request 400
 not found 404
 
 ## 取得(show)
-GET http://localhost:3000/api/v1/portfolios/{page}
+GET http://localhost:3000/portfolios/{page}
 
 positionsとstatusは必須。Jsonにこの2つがなければ、ステータス400番エラーにする予定（モックでは未対応）。
 
 #### 例
 ```
-curl http://localhost:3000/api/v1/portfolios/1 -X GET -H "Content-Type: application/json" -d '{"data":{"positions": ["フロントエンド","バックエンド","デザイナー"],"status": "戦闘中"}}'
+curl http://localhost:3000/portfolios/1 -X GET -H "Content-Type: application/json" -d '{"data":{"positions": ["フロントエンド","バックエンド","デザイナー"],"status": "戦闘中"}}'
 ```
 
 #### 成功時のレスポンス
@@ -137,12 +137,12 @@ curl http://localhost:3000/api/v1/portfolios/1 -X GET -H "Content-Type: applicat
 ```
 
 ## 更新(update)
-PATCH http://localhost:3000/api/v1/portfolios/{uuid}
+PATCH http://localhost:3000/portfolios/{uuid}
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxxxx1 -X PATCH -H "Content-Type: application/json" -d '{"data":{"uuid": "portxxxxx1", "site_url": "https://site-example.com/1", "image_urls": ["https://example.com/1", "https://example.com/2", "https://example.com/3"],"portfolio_comment": "一言"}}'
+curl http://localhost:3000/portfolios/portxxxxx1 -X PATCH -H "Content-Type: application/json" -d '{"data":{"uuid": "portxxxxx1", "site_url": "https://site-example.com/1", "image_urls": ["https://example.com/1", "https://example.com/2", "https://example.com/3"],"portfolio_comment": "一言"}}'
 ```
 
 #### 成功時のレスポンス
@@ -157,12 +157,12 @@ not found 404
 
 
 ## 削除(delete)
-DELETE http://localhost:3000/api/v1/portfolios/{uuid}
+DELETE http://localhost:3000/portfolios/{uuid}
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxxxx1 -X DELETE -H "Content-Type: application/json"
+curl http://localhost:3000/portfolios/portxxxxx1 -X DELETE -H "Content-Type: application/json"
 ```
 
 #### 成功時のレスポンス
@@ -181,10 +181,10 @@ not found 404
 ## 新規登録(create)
 
 #### 例
-POST http://localhost:3000/api/v1/portfolios/{uuid}/comments
+POST http://localhost:3000/portfolios/{uuid}/comments
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxxxx1/comments/ -X POST -H "Content-Type: application/json" -d '{"data":{"comment": "コメントです"}}'
+curl http://localhost:3000/portfolios/portxxxxx1/comments/ -X POST -H "Content-Type: application/json" -d '{"data":{"comment": "コメントです"}}'
 
 ```
 #### 成功時のレスポンス
@@ -199,12 +199,12 @@ not found 404
 
 
 ## 更新(update)
-UPDATE http://localhost:3000/api/v1/portfolios/{uuid}/comments/{uuid}
+UPDATE http://localhost:3000/portfolios/{uuid}/comments/{uuid}
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxxxx1/comments/commentxxx -X PATCH -H "Content-Type: application/json" -d '{"data":{"comment": "コメントです"}}'
+curl http://localhost:3000/portfolios/portxxxxx1/comments/commentxxx -X PATCH -H "Content-Type: application/json" -d '{"data":{"comment": "コメントです"}}'
 ```
 
 #### 成功時のレスポンス
@@ -219,12 +219,12 @@ not found 404
 
 
 ## 削除(delete)
-DELETE http://localhost:3000/api/v1/portfolios/{uuid}/comments/{uuid}
+DELETE http://localhost:3000/portfolios/{uuid}/comments/{uuid}
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxxxx1/comments/commentxx -X DELETE -H "Content-Type: application/json"
+curl http://localhost:3000/portfolios/portxxxxx1/comments/commentxx -X DELETE -H "Content-Type: application/json"
 
 ```
 
@@ -245,12 +245,12 @@ not found 404
 # 添削
 ## 新規登録(create)
 
-POST http://localhost:3000/api/v1/portfolios/{uuid}/corrections
+POST http://localhost:3000/portfolios/{uuid}/corrections
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxxxx1/corrections -X POST -H "Content-Type: application/json" -d '{"data":{"correction": "添削です"}}'
+curl http://localhost:3000/portfolios/portxxxxx1/corrections -X POST -H "Content-Type: application/json" -d '{"data":{"correction": "添削です"}}'
 
 ```
 #### 成功時のレスポンス
@@ -265,12 +265,12 @@ not found 404
 
 ## 更新(update)
 
-UPDATE http://localhost:3000/api/v1/portfolios/{uuid}/corrections/{uuid}
+UPDATE http://localhost:3000/portfolios/{uuid}/corrections/{uuid}
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxxxx1/corrections/correctionxx -X PATCH -H "Content-Type: application/json" -d '{"data":{"correction": "添削です"}}'
+curl http://localhost:3000/portfolios/portxxxxx1/corrections/correctionxx -X PATCH -H "Content-Type: application/json" -d '{"data":{"correction": "添削です"}}'
 ```
 
 #### 成功時のレスポンス
@@ -286,12 +286,12 @@ not found 404
 
 ## 削除(delete)
 
-DELETE http://localhost:3000/api/v1/portfolios/{uuid}/corrections/{uuid}
+DELETE http://localhost:3000/portfolios/{uuid}/corrections/{uuid}
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxxxx1/corrections/correctionxxx -X DELETE -H "Content-Type: application/json"
+curl http://localhost:3000/portfolios/portxxxxx1/corrections/correctionxxx -X DELETE -H "Content-Type: application/json"
 ```
 
 #### 成功時のレスポンス
@@ -308,16 +308,16 @@ not found 404
 
 
 # セッション（ログイン）
-POST http://localhost:3000/api/v1/auth/{provider}/callback
+POST http://localhost:3000/auth/{provider}/callback
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/auth/twitter/callback -X POST -H "Content-Type: application/json"
+curl http://localhost:3000/auth/twitter/callback -X POST -H "Content-Type: application/json"
 
 OR
 
-curl http://localhost:3000/api/v1/auth/github/callback -X POST -H "Content-Type: application/json"
+curl http://localhost:3000/auth/github/callback -X POST -H "Content-Type: application/json"
 ```
 #### 成功時のレスポンス
 
@@ -331,12 +331,12 @@ not found 404
 
 
 ## 削除(delete)
-DELETE http://localhost:3000/api/v1/sessions/{token}
+DELETE http://localhost:3000/sessions/{token}
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/sessions/tokenxxx -X DELETE -H "Content-Type: application/json"
+curl http://localhost:3000/sessions/tokenxxx -X DELETE -H "Content-Type: application/json"
 ```
 
 #### 成功時のレスポンス
@@ -355,10 +355,10 @@ not found 404
 ## 新規登録(create)
 
 #### 例
-POST http://localhost:3000/api/v1/portfolios/{uuid}/likes
+POST http://localhost:3000/portfolios/{uuid}/likes
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxx/likes -X POST -H "Content-Type: application/json"
+curl http://localhost:3000/portfolios/portxxx/likes -X POST -H "Content-Type: application/json"
 
 ```
 #### 成功時のレスポンス
@@ -372,12 +372,12 @@ bad request 400
 not found 404
 
 ## 削除(delete)
-DELETE http://localhost:3000/api/v1/portfolios/{uuid}/likes
+DELETE http://localhost:3000/portfolios/{uuid}/likes
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxx/likes -X DELETE -H "Content-Type: application/json"
+curl http://localhost:3000/portfolios/portxxx/likes -X DELETE -H "Content-Type: application/json"
 
 ```
 
@@ -398,10 +398,10 @@ not found 404
 ## 新規登録(create)
 
 #### 例
-POST http://localhost:3000/api/v1/portfolios/{uuid}/followers
+POST http://localhost:3000/portfolios/{uuid}/followers
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxx/followers -X POST -H "Content-Type: application/json"
+curl http://localhost:3000/portfolios/portxxx/followers -X POST -H "Content-Type: application/json"
 
 ```
 #### 成功時のレスポンス
@@ -415,12 +415,12 @@ bad request 400
 not found 404
 
 ## 削除(delete)
-DELETE http://localhost:3000/api/v1/portfolios/{uuid}/followers
+DELETE http://localhost:3000/portfolios/{uuid}/followers
 
 #### 例
 
 ```
-curl http://localhost:3000/api/v1/portfolios/portxxx/followers -X DELETE -H "Content-Type: application/json"
+curl http://localhost:3000/portfolios/portxxx/followers -X DELETE -H "Content-Type: application/json"
 
 ```
 
@@ -449,11 +449,11 @@ not found 404
 
 # 例
 ```
-curl http://localhost:3000/api/v1/corrections/correctionxxx -X DELETE -H "Content-Type: application/json" -d '{"data":{"error": 400}}'
+curl http://localhost:3000/corrections/correctionxxx -X DELETE -H "Content-Type: application/json" -d '{"data":{"error": 400}}'
 
 OR
 
-curl http://localhost:3000/api/v1/sessions/tokenxxx -X DELETE -H "Content-Type: application/json" -d '{"data":{"error":404}}'
+curl http://localhost:3000/sessions/tokenxxx -X DELETE -H "Content-Type: application/json" -d '{"data":{"error":404}}'
 ```
 
 # レスポンス
