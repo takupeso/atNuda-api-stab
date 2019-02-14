@@ -409,50 +409,6 @@ curl http://localhost:3000/portfolios/portxxx/likes -X DELETE -H "Content-Type: 
 bad request 400
 not found 404
 
-
-----
-
-# フォロワー
-## 新規登録(create)
-
-#### 例
-POST http://localhost:3000/portfolios/{uuid}/followers
-
-```
-curl http://localhost:3000/portfolios/portxxx/followers -X POST -H "Content-Type: application/json"
-
-```
-#### 成功時のレスポンス
-
-```
-{"date":{"status":201,"message":"OK"}}%    
-```
-
-#### エラー
-bad request 400
-not found 404
-
-## 削除(delete)
-DELETE http://localhost:3000/portfolios/{uuid}/followers
-
-#### 例
-
-```
-curl http://localhost:3000/portfolios/portxxx/followers -X DELETE -H "Content-Type: application/json"
-
-```
-
-#### 成功時のレスポンス
-
-```
-{"date":{"status":205,"message":"OK"}}% 
-```
-
-#### エラー
-bad request 400
-not found 404
-
-
 ----
 
 # エラー処理のスタブ
