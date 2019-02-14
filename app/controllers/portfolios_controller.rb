@@ -35,11 +35,11 @@ class PortfoliosController < ApplicationController
       data: [ 
         {
           "uuid": "portxxxxx1",
-          "site_url": "https://site-example.com/1",
+          "site_url": "https://www.google.com/",
           "image_urls": [
-            "https://example.com/1",
-            "https://example.com/2",
-            "https://example.com/3"
+            "http://localhost:4200/images/site1.jpeg",
+            "http://localhost:4200/images/site2.jpeg",
+            "http://localhost:4200/images/site3.jpeg"
           ],
           "portfolio_comment": "一言",
           "comments": [
@@ -63,21 +63,21 @@ class PortfoliosController < ApplicationController
             },
           ],
           "like": 4,
-          "follower": 0,
           "user": {
+            "uuid": "userxxxxx",
             "name": "john",
             "position": positions,
             "status": status,
-            "user_small_images_url": "https://user-small1.com/",
+            "user_small_images_url": "https://www.google.com/",
           }
         },
         {
           "uuid": "portxxxxx2",
-          "site_url": "https://site-example.com/1",
+          "site_url": "https://www.google.com/",
           "image_urls": [
-            "https://example.com/1",
-            "https://example.com/2",
-            "https://example.com/3"
+            "http://localhost:4200/images/site1.jpeg",
+            "http://localhost:4200/images/site2.jpeg",
+            "http://localhost:4200/images/site3.jpeg"
           ],
           "portfolio_comment": "一言",
           "comments": [
@@ -101,21 +101,21 @@ class PortfoliosController < ApplicationController
             }
           ],
           "like": 0,
-          "follower": 0,
           "user": {
+            "uuid": "userxxxxx",
             "name": "john",
             "position": positions,
             "status": status,
-            "user_small_images_url": "https://user-small1.com/",
+            "user_small_images_url": "https://www.google.com/",
           }
         },
         {
           "uuid": "portxxxxx3",
-          "site_url": "https://site-example.com/1",
+          "site_url": "https://www.google.com/",
           "image_urls": [
-            "https://example.com/1",
-            "https://example.com/2",
-            "https://example.com/3"
+            "http://localhost:4200/images/site1.jpeg",
+            "http://localhost:4200/images/site2.jpeg",
+            "http://localhost:4200/images/site3.jpeg"
           ],
           "portfolio_comment": "一言",
           "comments": [
@@ -139,21 +139,21 @@ class PortfoliosController < ApplicationController
             }
           ],
           "like": 2,
-          "follower": 9,
           "user": {
+            "uuid": "userxxxxx",
             "name": "john",
             "position": positions,
             "status": status,
-            "user_small_images_url": "https://user-small1.com/",
+            "user_small_images_url": "https://www.google.com/",
           }
         },
         {
           "uuid": "portxxxxx4",
-          "site_url": "https://site-example.com/1",
+          "site_url": "https://www.google.com/",
           "image_urls": [
-            "https://example.com/1",
-            "https://example.com/2",
-            "https://example.com/3"
+            "http://localhost:4200/images/site1.jpeg",
+            "http://localhost:4200/images/site2.jpeg",
+            "http://localhost:4200/images/site3.jpeg"
           ],
           "portfolio_comment": "一言",
           "comments": [
@@ -177,21 +177,21 @@ class PortfoliosController < ApplicationController
             }
           ],
           "like": 20,
-          "follower": 20,
           "user": {
+            "uuid": "userxxxxx",
             "name": "john",
             "position": positions,
             "status": status,
-            "user_small_images_url": "https://user-small1.com/",
+            "user_small_images_url": "https://www.google.com/",
           }
         },
         {
           "uuid": "portxxxxx5",
-          "site_url": "https://site-example.com/1",
+          "site_url": "https://www.google.com/",
           "image_urls": [
-            "https://example.com/1",
-            "https://example.com/2",
-            "https://example.com/3"
+            "http://localhost:4200/images/site1.jpeg",
+            "http://localhost:4200/images/site2.jpeg",
+            "http://localhost:4200/images/site3.jpeg"
           ],
           "portfolio_comment": "一言",
           "comments": [
@@ -215,12 +215,12 @@ class PortfoliosController < ApplicationController
             }
           ],
           "like": 100,
-          "follower": 200,
           "user": {
+            "uuid": "userxxxxx",
             "name": "john",
             "position": positions,
             "status": status,
-            "user_small_images_url": "https://user-small1.com/",
+            "user_small_images_url": "https://www.google.com/",
           }
         }
       ]

@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     render json: { date: {status: 200, "message" => "OK" } } unless error?
   end
 
-  def get_portfolios_of_user_by_uuid
+  def get_user_by_uuid
 
     json = {
       data: {
@@ -30,175 +30,273 @@ class UsersController < ApplicationController
         "name": "john",
         "position": ["フロントエンド", "デザイナー"],
         "status": "転職中",
-        "user_large_image_url": "https://user1-large.com/",
-        "user_small_images_url": "https://user-small1.com/",
+        "user_large_image_url": "http://localhost:4200/images/large_user1.jpeg",
+        "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
         "portforios": [
-            {
-              "uuid": "portxxxxxxx1",
-              "like": 4,
-              "follower": 2,
-              "site_url": "https://site1.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx2",
-              "like": 2,
-              "follower": 0,
-              "site_url": "https://site2.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx3",
-              "like": 4,
-              "follower": 9,
-              "site_url": "https://site3.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx4",
-              "like": 3,
-              "follower": 20,
-              "site_url": "https://site4.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx5",
-              "like": 1,
-              "follower": 90,
-              "site_url": "https://site5.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx6",
-              "like": 10,
-              "follower": 200,
-              "site_url": "https://site6.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx7",
-              "like": 0,
-              "follower": 0,
-              "site_url": "https://site7.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx8",
-              "like": 0,
-              "follower": 2,
-              "site_url": "https://site8.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx9",
-              "like": 3,
-              "follower": 2,
-              "site_url": "https://site9.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx10",
-              "site_url": "https://site10.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx11",
-              "like": 6,
-              "follower": 2,
-              "site_url": "https://site11.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx12",
-              "like": 0,
-              "follower": 8,
-              "site_url": "https://site12.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx13",
-              "like": 100,
-              "follower": 200,
-              "site_url": "https://site13.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx14",
-              "like": 0,
-              "follower": 2,
-              "site_url": "https://site14.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-            {
-              "uuid": "portxxxxxxx15",
-              "like": 100,
-              "follower": 5,
-              "site_url": "https://site15.com/",
-              "image_urls": [
-                "https://image.com/1",
-                "https://image.com/2",
-                "https://image.com/3"
-              ],
-            },
-          ]
-        }
+          {
+            "uuid": "portxxxxxxx1",
+            "like": 4,
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx2",
+            "like": 2,
+            "site_url": "https://site2.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx3",
+            "like": 4,
+            "site_url": "https://site3.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx4",
+            "like": 3,
+            "site_url": "https://site4.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx5",
+            "like": 1,
+            "site_url": "https://site5.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx6",
+            "like": 10,
+            "site_url": "https://site6.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx7",
+            "like": 0,
+            "site_url": "https://site7.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx8",
+            "like": 0,
+            "site_url": "https://site8.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx9",
+            "like": 3,
+            "site_url": "https://site9.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx10",
+            "site_url": "https://site10.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx11",
+            "site_url": "https://site11.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx12",
+            "like": 0,
+            "site_url": "https://site12.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx13",
+            "like": 100,
+            "site_url": "https://site13.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx14",
+            "like": 0,
+            "site_url": "https://site14.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          {
+            "uuid": "portxxxxxxx15",
+            "like": 100,
+            "site_url": "https://site15.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+        ]
       }
+    }
+
+    bad_request
+    not_found
+    render json: json unless error?
+  end
+
+  def get_likes_portfolios_of_user_by_uuid
+    json = {
+      data: [
+        {
+          "uuid": "userxxxxxxx2",
+          "name": "john",
+          "position": ["ワールドエンド", "バックエンド"],
+          "status": "転職中",
+          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "portforio": {
+            "uuid": "portxxxxxxx1",
+            "like": 4,
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+        },
+        {
+          "uuid": "userxxxxxxx3",
+          "name": "john",
+          "position": ["ワールドエンド", "バックエンド"],
+          "status": "転職中",
+          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "portforio": {
+            "uuid": "portxxxxxxx1",
+            "like": 4,
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+        },
+        {
+          "uuid": "userxxxxxxx4",
+          "name": "john",
+          "position": ["ワールドエンド", "バックエンド"],
+          "status": "転職中",
+          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "portforio": {
+            "uuid": "portxxxxxxx1",
+            "like": 4,
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+        },
+        {
+          "uuid": "userxxxxxxx5",
+          "name": "john",
+          "position": ["ワールドエンド", "バックエンド"],
+          "status": "転職中",
+          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "portforio": {
+            "uuid": "portxxxxxxx1",
+            "like": 4,
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+        },
+        {
+          "uuid": "userxxxxxxx6",
+          "name": "john",
+          "position": ["ワールドエンド", "バックエンド"],
+          "status": "転職中",
+          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "portforio": {
+            "uuid": "portxxxxxxx1",
+            "like": 4,
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+        },
+        {
+          "uuid": "userxxxxxxx7",
+          "name": "john",
+          "position": ["ワールドエンド", "バックエンド"],
+          "status": "転職中",
+          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "portforio": {
+            "uuid": "portxxxxxxx1",
+            "like": 4,
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+        },
+      ]
+    }
 
     bad_request
     not_found

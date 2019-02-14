@@ -1,5 +1,14 @@
 version: '3'
 services:
+  web:
+    image: nginx
+    volumes:
+      - ./web/html:/html
+      - ./web/html/images:/html/images
+      - ./web/conf.d:/etc/nginx/conf.d
+    ports:
+      - '4200:80'
+
   db:
     image: mysql:5.7.24
     environment:
@@ -20,3 +29,7 @@ services:
       - '3000:3000'
     depends_on:
       - db
+      - web
+
+
+
