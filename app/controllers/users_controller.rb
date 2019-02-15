@@ -26,160 +26,356 @@ class UsersController < ApplicationController
 
     json = {
       data: {
-        "uuid": "userxxxxxxx1",
-        "name": "john",
-        "position": ["フロントエンド", "デザイナー"],
-        "status": "転職中",
-        "user_large_image_url": "http://localhost:4200/images/large_user1.jpeg",
-        "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+        "user": {
+          "uuid": "userxxxxxxx1",
+          "name": "john",
+          "positions": ["フロントエンド", "デザイナー"],
+          "status": "転職中",
+          "user_large_image_url": "http://localhost:4200/images/large_user1.jpeg",
+          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+        },
         "portforios": [
           {
             "uuid": "portxxxxxxx1",
-            "like": 4,
             "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
-          },
-          {
-            "uuid": "portxxxxxxx2",
-            "like": 2,
-            "site_url": "https://site2.com/",
-            "image_urls": [
-              "http://localhost:4200/images/site1.jpeg",
-              "http://localhost:4200/images/site2.jpeg",
-              "http://localhost:4200/images/site3.jpeg"
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+               "myself": false,
+                "comment": "誰かのコメント"
+              }
             ],
-          },
-          {
-            "uuid": "portxxxxxxx3",
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              }
+            ],
             "like": 4,
-            "site_url": "https://site3.com/",
+            "user": {
+              "uuid": "userxxxxx",
+              "name": "john",
+              "positions": ["フロントエンド", "バックエンド"],
+              "status": status,
+              "user_small_images_url": "https://www.google.com/",
+            }
+          },
+          {
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+               "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              }
+            ],
+            "like": 2,
+            "user": {
+              "uuid": "userxxxxx",
+              "name": "john",
+              "positions": ["フロントエンド", "バックエンド"],
+              "status": status,
+              "user_small_images_url": "https://www.google.com/",
+            }
           },
           {
-            "uuid": "portxxxxxxx4",
-            "like": 3,
-            "site_url": "https://site4.com/",
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+               "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              }
+            ],
+            "like": 0,
+            "user": {
+              "uuid": "userxxxxx",
+              "name": "john",
+              "positions": ["フロントエンド", "バックエンド"],
+              "status": status,
+              "user_small_images_url": "https://www.google.com/",
+            }
           },
           {
-            "uuid": "portxxxxxxx5",
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+               "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              }
+            ],
+            "like": 9,
+            "user": {
+              "uuid": "userxxxxx",
+              "name": "john",
+              "positions": ["フロントエンド", "バックエンド"],
+              "status": status,
+              "user_small_images_url": "https://www.google.com/",
+            }
+          },
+          {
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+               "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              }
+            ],
             "like": 1,
-            "site_url": "https://site5.com/",
+            "user": {
+              "uuid": "userxxxxx",
+              "name": "john",
+              "positions": ["フロントエンド", "バックエンド"],
+              "status": status,
+              "user_small_images_url": "https://www.google.com/",
+            }
+          },
+          {
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+               "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              }
+            ],
+            "like": 4,
+            "user": {
+              "uuid": "userxxxxx",
+              "name": "john",
+              "positions": ["フロントエンド", "バックエンド"],
+              "status": status,
+              "user_small_images_url": "https://www.google.com/",
+            }
           },
           {
-            "uuid": "portxxxxxxx6",
-            "like": 10,
-            "site_url": "https://site6.com/",
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+               "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              }
+            ],
+            "like": 6,
+            "user": {
+              "uuid": "userxxxxx",
+              "name": "john",
+              "positions": ["フロントエンド", "バックエンド"],
+              "status": status,
+              "user_small_images_url": "https://www.google.com/",
+            }
           },
           {
-            "uuid": "portxxxxxxx7",
-            "like": 0,
-            "site_url": "https://site7.com/",
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+               "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              }
+            ],
+            "like": 80,
+            "user": {
+              "uuid": "userxxxxx",
+              "name": "john",
+              "positions": ["フロントエンド", "バックエンド"],
+              "status": status,
+              "user_small_images_url": "https://www.google.com/",
+            }
           },
           {
-            "uuid": "portxxxxxxx8",
-            "like": 0,
-            "site_url": "https://site8.com/",
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
-          },
-          {
-            "uuid": "portxxxxxxx9",
-            "like": 3,
-            "site_url": "https://site9.com/",
-            "image_urls": [
-              "http://localhost:4200/images/site1.jpeg",
-              "http://localhost:4200/images/site2.jpeg",
-              "http://localhost:4200/images/site3.jpeg"
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+               "myself": false,
+                "comment": "誰かのコメント"
+              }
             ],
-          },
-          {
-            "uuid": "portxxxxxxx10",
-            "site_url": "https://site10.com/",
-            "image_urls": [
-              "http://localhost:4200/images/site1.jpeg",
-              "http://localhost:4200/images/site2.jpeg",
-              "http://localhost:4200/images/site3.jpeg"
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              }
             ],
-          },
-          {
-            "uuid": "portxxxxxxx11",
-            "site_url": "https://site11.com/",
-            "image_urls": [
-              "http://localhost:4200/images/site1.jpeg",
-              "http://localhost:4200/images/site2.jpeg",
-              "http://localhost:4200/images/site3.jpeg"
-            ],
-          },
-          {
-            "uuid": "portxxxxxxx12",
-            "like": 0,
-            "site_url": "https://site12.com/",
-            "image_urls": [
-              "http://localhost:4200/images/site1.jpeg",
-              "http://localhost:4200/images/site2.jpeg",
-              "http://localhost:4200/images/site3.jpeg"
-            ],
-          },
-          {
-            "uuid": "portxxxxxxx13",
             "like": 100,
-            "site_url": "https://site13.com/",
-            "image_urls": [
-              "http://localhost:4200/images/site1.jpeg",
-              "http://localhost:4200/images/site2.jpeg",
-              "http://localhost:4200/images/site3.jpeg"
-            ],
-          },
-          {
-            "uuid": "portxxxxxxx14",
-            "like": 0,
-            "site_url": "https://site14.com/",
-            "image_urls": [
-              "http://localhost:4200/images/site1.jpeg",
-              "http://localhost:4200/images/site2.jpeg",
-              "http://localhost:4200/images/site3.jpeg"
-            ],
-          },
-          {
-            "uuid": "portxxxxxxx15",
-            "like": 100,
-            "site_url": "https://site15.com/",
-            "image_urls": [
-              "http://localhost:4200/images/site1.jpeg",
-              "http://localhost:4200/images/site2.jpeg",
-              "http://localhost:4200/images/site3.jpeg"
-            ],
+            "user": {
+              "uuid": "userxxxxx",
+              "name": "john",
+              "positions": ["フロントエンド", "バックエンド"],
+              "status": status,
+              "user_small_images_url": "https://www.google.com/",
+            }
           },
         ]
       }
@@ -194,105 +390,363 @@ class UsersController < ApplicationController
     json = {
       data: [
         {
-          "uuid": "userxxxxxxx2",
-          "name": "john",
-          "position": ["ワールドエンド", "バックエンド"],
-          "status": "転職中",
-          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "user": {
+            "uuid": "userxxxxxxx2",
+            "name": "john",
+            "positions": ["ワールドエンド", "バックエンド"],
+            "status": "転職中",
+            "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          },
           "portforio": {
             "uuid": "portxxxxxxx1",
-            "like": 4,
             "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+                "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              },
+            ],
+            "like": 4,
           },
         },
         {
-          "uuid": "userxxxxxxx3",
-          "name": "john",
-          "position": ["ワールドエンド", "バックエンド"],
-          "status": "転職中",
-          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "user": {
+            "uuid": "userxxxxxxx3",
+            "name": "john",
+            "positions": ["ワールドエンド", "バックエンド"],
+            "status": "転職中",
+            "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          },
           "portforio": {
             "uuid": "portxxxxxxx1",
-            "like": 4,
             "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+                "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              },
+            ],
+            "like": 8,
           },
         },
         {
-          "uuid": "userxxxxxxx4",
-          "name": "john",
-          "position": ["ワールドエンド", "バックエンド"],
-          "status": "転職中",
-          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "user": {
+            "uuid": "userxxxxxxx4",
+            "name": "john",
+            "positions": ["ワールドエンド", "バックエンド"],
+            "status": "転職中",
+            "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          },
           "portforio": {
             "uuid": "portxxxxxxx1",
-            "like": 4,
             "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+                "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              },
+            ],
+            "like": 1,
           },
         },
         {
-          "uuid": "userxxxxxxx5",
-          "name": "john",
-          "position": ["ワールドエンド", "バックエンド"],
-          "status": "転職中",
-          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "user": {
+            "uuid": "userxxxxxxx5",
+            "name": "john",
+            "positions": ["ワールドエンド", "バックエンド"],
+            "status": "転職中",
+            "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          },
           "portforio": {
             "uuid": "portxxxxxxx1",
-            "like": 4,
             "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+                "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              },
+            ],
+            "like": 9,
           },
         },
         {
-          "uuid": "userxxxxxxx6",
-          "name": "john",
-          "position": ["ワールドエンド", "バックエンド"],
-          "status": "転職中",
-          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "user": {
+            "uuid": "userxxxxxxx6",
+            "name": "john",
+            "positions": ["ワールドエンド", "バックエンド"],
+            "status": "転職中",
+            "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          },
           "portforio": {
             "uuid": "portxxxxxxx1",
-            "like": 4,
             "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+                "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              },
+            ],
+            "like": 40,
           },
         },
         {
-          "uuid": "userxxxxxxx7",
-          "name": "john",
-          "position": ["ワールドエンド", "バックエンド"],
-          "status": "転職中",
-          "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          "user": {
+            "uuid": "userxxxxxxx7",
+            "name": "john",
+            "positions": ["ワールドエンド", "バックエンド"],
+            "status": "転職中",
+            "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          },
           "portforio": {
             "uuid": "portxxxxxxx1",
-            "like": 4,
             "site_url": "https://www.google.com/",
             "image_urls": [
               "http://localhost:4200/images/site1.jpeg",
               "http://localhost:4200/images/site2.jpeg",
               "http://localhost:4200/images/site3.jpeg"
             ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+                "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              },
+            ],
+            "like": 100,
+          },
+        },
+        {
+          "user": {
+            "uuid": "userxxxxxxx8",
+            "name": "john",
+            "positions": ["ワールドエンド", "バックエンド"],
+            "status": "転職中",
+            "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          },
+          "portforio": {
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+                "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              },
+            ],
+            "like": 200,
+          },
+        },
+        {
+          "user": {
+            "uuid": "userxxxxxxx9",
+            "name": "john",
+            "positions": ["ワールドエンド", "バックエンド"],
+            "status": "転職中",
+            "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          },
+          "portforio": {
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+                "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              },
+            ],
+            "like": 0,
+          },
+        },
+        {
+          "user": {
+            "uuid": "userxxxxxxx10",
+            "name": "john",
+            "positions": ["ワールドエンド", "バックエンド"],
+            "status": "転職中",
+            "user_small_images_url": "http://localhost:4200/images/small_user1.jpeg",
+          },
+          "portforio": {
+            "uuid": "portxxxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+              "http://localhost:4200/images/site1.jpeg",
+              "http://localhost:4200/images/site2.jpeg",
+              "http://localhost:4200/images/site3.jpeg"
+            ],
+            "explanation": "一言",
+            "comments": [
+              {
+                "myself": true,
+                "comment": "私のコメント"
+              },
+              {
+                "myself": false,
+                "comment": "誰かのコメント"
+              }
+            ],
+            "corrections": [
+              {
+                "myself": true,
+                "correction": "添削への返信"
+              },
+              {
+                "myself": false,
+                "correction": "誰かの添削コメント"
+              },
+            ],
+            "like": 0,
           },
         },
       ]

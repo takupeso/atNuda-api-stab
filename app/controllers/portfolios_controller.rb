@@ -34,14 +34,16 @@ class PortfoliosController < ApplicationController
     json = { 
       data: [ 
         {
-          "uuid": "portxxxxx1",
-          "site_url": "https://www.google.com/",
-          "image_urls": [
+          "portfolio": {
+            "uuid": "portxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
             "http://localhost:4200/images/site1.jpeg",
             "http://localhost:4200/images/site2.jpeg",
             "http://localhost:4200/images/site3.jpeg"
-          ],
-          "portfolio_comment": "一言",
+            ],
+          },
+          "explanation": "一言",
           "comments": [
             {
               "myself": true,
@@ -66,20 +68,22 @@ class PortfoliosController < ApplicationController
           "user": {
             "uuid": "userxxxxx",
             "name": "john",
-            "position": positions,
+            "positions": positions,
             "status": status,
             "user_small_images_url": "https://www.google.com/",
-          }
+          },
         },
         {
-          "uuid": "portxxxxx2",
-          "site_url": "https://www.google.com/",
-          "image_urls": [
+          "portfolio": {
+            "uuid": "portxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
             "http://localhost:4200/images/site1.jpeg",
             "http://localhost:4200/images/site2.jpeg",
             "http://localhost:4200/images/site3.jpeg"
-          ],
-          "portfolio_comment": "一言",
+            ],
+          },
+          "explanation": "一言",
           "comments": [
             {
               "myself": true,
@@ -98,26 +102,28 @@ class PortfoliosController < ApplicationController
             {
               "myself": false,
               "correction": "誰かの添削コメント"
-            }
+            },
           ],
-          "like": 0,
+          "like": 3,
           "user": {
             "uuid": "userxxxxx",
             "name": "john",
-            "position": positions,
+            "positions": positions,
             "status": status,
             "user_small_images_url": "https://www.google.com/",
-          }
+          },
         },
         {
-          "uuid": "portxxxxx3",
-          "site_url": "https://www.google.com/",
-          "image_urls": [
+          "portfolio": {
+            "uuid": "portxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
             "http://localhost:4200/images/site1.jpeg",
             "http://localhost:4200/images/site2.jpeg",
             "http://localhost:4200/images/site3.jpeg"
-          ],
-          "portfolio_comment": "一言",
+            ],
+          },
+          "explanation": "一言",
           "comments": [
             {
               "myself": true,
@@ -136,26 +142,108 @@ class PortfoliosController < ApplicationController
             {
               "myself": false,
               "correction": "誰かの添削コメント"
+            },
+          ],
+          "like": 23,
+          "user": {
+            "uuid": "userxxxxx",
+            "name": "john",
+            "positions": positions,
+            "status": status,
+            "user_small_images_url": "https://www.google.com/",
+          },
+        },
+        {
+          "portfolio": {
+            "uuid": "portxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+            "http://localhost:4200/images/site1.jpeg",
+            "http://localhost:4200/images/site2.jpeg",
+            "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          "explanation": "一言",
+          "comments": [
+            {
+              "myself": true,
+              "comment": "私のコメント"
+            },
+            {
+              "myself": false,
+              "comment": "誰かのコメント"
             }
+          ],
+          "corrections": [
+            {
+              "myself": true,
+              "correction": "添削への返信"
+            },
+            {
+              "myself": false,
+              "correction": "誰かの添削コメント"
+            },
+          ],
+          "like": 400,
+          "user": {
+            "uuid": "userxxxxx",
+            "name": "john",
+            "positions": positions,
+            "status": status,
+            "user_small_images_url": "https://www.google.com/",
+          },
+        },
+        {
+          "portfolio": {
+            "uuid": "portxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
+            "http://localhost:4200/images/site1.jpeg",
+            "http://localhost:4200/images/site2.jpeg",
+            "http://localhost:4200/images/site3.jpeg"
+            ],
+          },
+          "explanation": "一言",
+          "comments": [
+            {
+              "myself": true,
+              "comment": "私のコメント"
+            },
+            {
+              "myself": false,
+              "comment": "誰かのコメント"
+            }
+          ],
+          "corrections": [
+            {
+              "myself": true,
+              "correction": "添削への返信"
+            },
+            {
+              "myself": false,
+              "correction": "誰かの添削コメント"
+            },
           ],
           "like": 2,
           "user": {
             "uuid": "userxxxxx",
             "name": "john",
-            "position": positions,
+            "positions": positions,
             "status": status,
             "user_small_images_url": "https://www.google.com/",
-          }
+          },
         },
         {
-          "uuid": "portxxxxx4",
-          "site_url": "https://www.google.com/",
-          "image_urls": [
+          "portfolio": {
+            "uuid": "portxxxxx1",
+            "site_url": "https://www.google.com/",
+            "image_urls": [
             "http://localhost:4200/images/site1.jpeg",
             "http://localhost:4200/images/site2.jpeg",
             "http://localhost:4200/images/site3.jpeg"
-          ],
-          "portfolio_comment": "一言",
+            ],
+          },
+          "explanation": "一言",
           "comments": [
             {
               "myself": true,
@@ -174,55 +262,17 @@ class PortfoliosController < ApplicationController
             {
               "myself": false,
               "correction": "誰かの添削コメント"
-            }
+            },
           ],
-          "like": 20,
+          "like": 0,
           "user": {
             "uuid": "userxxxxx",
             "name": "john",
-            "position": positions,
+            "positions": positions,
             "status": status,
             "user_small_images_url": "https://www.google.com/",
-          }
+          },
         },
-        {
-          "uuid": "portxxxxx5",
-          "site_url": "https://www.google.com/",
-          "image_urls": [
-            "http://localhost:4200/images/site1.jpeg",
-            "http://localhost:4200/images/site2.jpeg",
-            "http://localhost:4200/images/site3.jpeg"
-          ],
-          "portfolio_comment": "一言",
-          "comments": [
-            {
-              "myself": true,
-              "comment": "私のコメント"
-            },
-            {
-              "myself": false,
-              "comment": "誰かのコメント"
-            }
-          ],
-          "corrections": [
-            {
-              "myself": true,
-              "correction": "添削への返信"
-            },
-            {
-              "myself": false,
-              "correction": "誰かの添削コメント"
-            }
-          ],
-          "like": 100,
-          "user": {
-            "uuid": "userxxxxx",
-            "name": "john",
-            "position": positions,
-            "status": status,
-            "user_small_images_url": "https://www.google.com/",
-          }
-        }
       ]
     }
     bad_request
